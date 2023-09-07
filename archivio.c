@@ -366,7 +366,7 @@ void *fun_caposcrittore(void *v){
 	xsem_post(d->sem_data_items,QUI);
 	caposc_ind++;
 		}
-	return NULL;
+	pthread_exit(NULL);
 }
 
 void *fun_scrittori(void *v){
@@ -386,7 +386,7 @@ void *fun_scrittori(void *v){
 	write_unlock(d->read_write); 
 	free(stringa);
 		}while(true);		
-	return NULL;
+	pthread_exit(NULL);
 }
 
 void *fun_capolettore(void *v){
@@ -424,7 +424,7 @@ void *fun_capolettore(void *v){
 	xsem_post(d->sem_data_items,QUI);
 	indice_capolet++;
 		}
-	return NULL;
+	pthread_exit(NULL);
 }
 
 void *fun_lettori(void *v){
@@ -448,7 +448,7 @@ void *fun_lettori(void *v){
 	xpthread_mutex_unlock(d->mutex_file,QUI);
 	free(stringa);
 		}while(true);	 
-	return NULL;
+	pthread_exit(NULL);
 	}
 
 void *signal_body(void *v){
