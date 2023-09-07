@@ -80,7 +80,7 @@ int xpipe(int pipefd[2], int linea, char *file) {
   }
   return e;
 }
-
+/*
 // ---------------- memoria condivisa POSIX
 int xshm_open(const char *name, int oflag, mode_t mode, int linea, char *file)
 {
@@ -103,7 +103,7 @@ int xshm_unlink(const char *name, int linea, char *file)
   }
   return e;  
 }
-
+*/
 int xftruncate(int fd, off_t length, int linea, char *file)
 {
   int e = ftruncate(fd,length);
