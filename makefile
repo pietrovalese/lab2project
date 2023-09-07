@@ -12,7 +12,7 @@ EXECS=archivio client1  #posso metterci gli altri eseguibili da creare
 # di default make cerca di realizzare il primo target 
 all: $(EXECS)
 	chmod u+x server.py
-	chmod u+x client2.py
+	chmod u+x client2
 
 # non devo scrivere il comando associato ad ogni target 
 # perché il default di make in questo caso va bene
